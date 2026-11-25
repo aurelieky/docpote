@@ -1,0 +1,12 @@
+{
+  "name": "docpote",
+  "private": true,
+  "description": "Pilote DocPote : site statique (index.html, css/, js/, tess/). Ces dépendances servent seulement aux tests hors ligne.",
+  "scripts": { "test": "python3 tests/test_app.py" },
+  "devDependencies": {
+    "jspdf": "2.5.1",
+    "pdfjs-dist": "3.11.174",
+    "tesseract.js": "5.1.1",
+    "tesseract.js-core": "5.1.1"
+  }
+}
