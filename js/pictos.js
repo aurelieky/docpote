@@ -65,7 +65,14 @@ const PIC = (() => {
     link: `<svg viewBox="0 0 24 24" class="ico" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>`,
     copy: `<svg viewBox="0 0 24 24" class="ico" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>`,
     export: `<svg viewBox="0 0 24 24" class="ico" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h8l4 4v14H6z"/><path d="M12 10v7M9 14l3 3 3-3"/></svg>`,
-    eye: `<svg viewBox="0 0 24 24" class="ico" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>`
+    eye: `<svg viewBox="0 0 24 24" class="ico" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>`,
+    eyeOff: `<svg viewBox="0 0 24 24" class="ico" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg>`,
+    prevPara: `<svg viewBox="0 0 24 24" class="ico" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 5v14"/><path d="M19 5l-9 7 9 7z" fill="currentColor"/></svg>`,
+    para: `<svg viewBox="0 0 24 24" class="ico" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M4 6h16M4 11h16M4 16h10"/></svg>`,
+    /* Conseils photo */
+    tipLight: S(`<rect x="30" y="52" width="56" height="58" rx="6" fill="var(--p-3)"/><path d="M40 70h36M40 82h36M40 94h24"/><circle cx="60" cy="24" r="12" fill="var(--p-1)"/><path d="M60 4v6M60 38v6M40 24h-6M86 24h-6M46 10l4 4M74 10l-4 4"/>`),
+    tipFlat: S(`<path d="M10 92l50-14 50 14-50 16z" fill="var(--p-2)"/><path d="M26 88l34-9 34 9-34 10z" fill="var(--p-3)"/><path d="M40 88l20-5M46 93l20-5"/><path d="M60 16v40M48 44l12 12 12-12"/>`),
+    tipCorners: S(`<rect x="32" y="22" width="56" height="76" rx="3" fill="var(--p-3)"/><path d="M42 40h36M42 52h36M42 64h24"/><path d="M14 22V8h14M106 22V8H92M14 98v14h14M106 98v14H92" stroke="var(--p-ink)" stroke-width="5"/>`)
   };
 })();
 /* Pictogramme par étape (clé dans data.js) */

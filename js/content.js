@@ -3,11 +3,11 @@
    Une langue sans texte relu affiche le français et le signale (badge FR). */
 Object.assign(UI, {
   docsDoor: { fr: "Mes documents", en: "My documents", zh: "我的文件", ar: "مستنداتي" },
-  togetherDoor: { fr: "Ensemble", en: "Together", zh: "一起", ar: "معًا" },
+  togetherDoor: { fr: "Ensemble", en: "Together", zh: "交流", ar: "معًا" },
   helpDocsDoor: { fr: "Mes documents. Photographiez ou ouvrez un courrier, écoutez-le et comprenez quoi faire.", en: "My documents. Photograph or open a letter, listen to it and understand what to do.", zh: "我的文件。拍下或打开一封信，收听它，弄懂该怎么做。", ar: "مستنداتي. صوّر رسالة أو افتحها، واستمع إليها، وافهم ما عليك فعله." },
   helpTogetherDoor: { fr: "Ensemble. Apprenez des mots, posez des questions et rencontrez d’autres personnes.", en: "Together. Learn words, ask questions and meet other people.", zh: "一起。学习词语、提问，认识其他人。", ar: "معًا. تعلّم كلمات، واطرح أسئلة، وتعرّف على أشخاص آخرين." },
   scanShort: { fr: "Scanner", en: "Scan", zh: "拍照", ar: "تصوير" },
-  importShort: { fr: "Importer", en: "Import", zh: "导入", ar: "استيراد" },
+  importShort: { fr: "Importer", en: "Import", zh: "导入", ar: "إضافة ملف" },
   helpScan: { fr: "Scanner. Prenez votre courrier en photo, posé à plat, avec de la lumière.", en: "Scan. Take a photo of your letter, lying flat, in good light.", zh: "拍照。把信放平，在光线好的地方拍照。", ar: "تصوير. صوّر رسالتك وهي مسطّحة وفي إضاءة جيدة." },
   helpImport: { fr: "Importer. Choisissez une photo ou un PDF déjà dans votre téléphone.", en: "Import. Choose a photo or a PDF already on your phone.", zh: "导入。选择手机里已有的照片或PDF。", ar: "استيراد. اختر صورة أو ملف PDF موجودًا في هاتفك." },
   savedShort: { fr: "Enregistrés", en: "Saved", zh: "已保存", ar: "المحفوظة" },

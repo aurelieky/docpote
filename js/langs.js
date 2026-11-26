@@ -90,6 +90,7 @@ const RECORDINGS = {
 function voiceFor(code) {
   const L = LANG_BY[code]; if (!L || !L.tts.length) return null;
   let vs = []; try { vs = window.speechSynthesis ? speechSynthesis.getVoices() : []; } catch (e) {}
+  vs = vs.slice().sort((a, b) => (b.localService !== false) - (a.localService !== false));   /* voix du téléphone d'abord */
   const norm = v => (v.lang || "").replace("_", "-").toLowerCase();
   const nameIs = (v, re) => re.test(v.name || "");
   for (const pat of L.tts) {

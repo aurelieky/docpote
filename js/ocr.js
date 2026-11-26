@@ -29,11 +29,14 @@ function getTess() {
     await loadScript(LIB.tess);
     /* Le moteur demande « <langPath>/fra.traineddata » : la partie après « ? » est ignorée
        par le serveur, ce qui renvoie vers le fichier publié avec la page. */
-    const w = await Tesseract.createWorker("fra", 1, {
+    /* Sans réseau, le moteur ne dit jamais « échec » : on abandonne après 45 s avec un message clair. */
+    const make = Tesseract.createWorker("fra", 1, {
       workerPath: LIB.tessWorker, corePath: LIB.tessCore, cacheMethod: "none", gzip: false,
       langPath: new URL(LIB.langFile + "?v=1&f=", location.href).href,
       logger: m => OCRLOG && OCRLOG(m)
     });
+    make.catch(() => {});
+    const w = await Promise.race([make, new Promise((_, ko) => setTimeout(() => ko(new Error("Moteur de lecture indisponible (réseau)")), window.OCR_TIMEOUT_MS || 45000))]);
     await w.setParameters({ preserve_interword_spaces: "1", user_defined_dpi: "300" });
     return w;
   })().catch(e => { tessP = null; throw e; });

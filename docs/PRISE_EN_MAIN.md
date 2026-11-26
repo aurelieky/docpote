@@ -47,6 +47,22 @@ L'application est pensée pour des personnes qui lisent peu ou pas le français 
 - Les extraits de voix humaine servent seulement à reconnaître sa langue. Pour que l'application **parle** wolof, bambara, soninké, etc., il faudra faire enregistrer ses phrases par des locuteurs natifs (voir les prochaines étapes).
 - Le micro dépend du navigateur et de la langue. Il est indiqué indisponible pour les langues sans service connu (wenzhou, teochew, kabyle, bambara, wolof, soninké, peul, tigrinya, dari, pachto, créole haïtien).
 - Les voix dépendent du téléphone. Aucune voix de remplacement n'est utilisée : pas de voix mandarine pour le wenzhou ou le teochew, pas de voix d'Iran pour le dari.
+- **Tenue de l'application** : le bouton retour du téléphone suit les écrans de l'application (il ne quitte plus le site). Le surlignage de la lecture reste quand l'écran se redessine. L'application attend que le téléphone ait chargé ses voix avant de dire qu'il n'y en a pas. Si la lecture d'un document échoue faute de réseau, un message s'affiche au bout de 45 secondes. La dictée du navigateur demande d'abord l'accord (elle peut envoyer la voix à un service en ligne). Les demandes d'ami ouvrent le profil, avec Bloquer et Signaler. Les textes de l'aide, des signalements et de l'installation existent en français, anglais, chinois et arabe.
+- **Vie privée et sécurité** : les polices sont hébergées sur le site (rien n'est demandé à Google). Une voix « en ligne » du navigateur ne lit un vrai courrier qu'après accord ; les voix du téléphone passent avant. Le filtre de coordonnées repère aussi « 06/12/34/56/78 », les chiffres pleine largeur, « (at) », « @pseudo », Signal, Discord… Bloquer et Signaler sont atteignables depuis les questions et les réponses. Un exemple enregistré reste marqué « courrier fictif ». Les données abîmées du téléphone ne vident plus l'écran ; les boutons Retour et Avancer du navigateur suivent les écrans.
+- **Lecture sur téléphone** : si le téléphone « oublie » de signaler la fin d'un passage, la lecture passe seule au suivant. Elle se met en pause quand l'écran se verrouille. La saisie dans les cases d'un document enregistré n'est plus ralentie, et un tirer-pour-actualiser ne fait plus perdre le document en cours.
+- **Parcours simplifié (revue d'usage)** :
+  - écran des langues : la langue du téléphone et le français sont proposés en premier ;
+  - premier lancement : 3 cartes à écouter (à quoi sert l'application, pas un service officiel, tout reste sur le téléphone) ;
+  - accueil : le dernier courrier enregistré s'ouvre en un appui ;
+  - « Écouter » lit d'abord l'essentiel (à quoi sert le courrier, quoi faire, quoi fournir, avant quand), puis propose de lire tout le courrier ; le courrier est replié par défaut ;
+  - « Enregistrer » est dans la carte « Écouter » ; un haut-parleur sur l'aide urgente et sur « Enregistrés » ;
+  - lecteur : des points montrent l'avancement, un bouton revient au passage précédent ;
+  - Assurance Maladie : le titre dit « Pas de date écrite : envoyez-le bientôt » ;
+  - avant la première photo : 3 conseils illustrés (lumière, à plat, 4 coins) ;
+  - changer de langue dans un courrier garde le même courrier ;
+  - Apprendre : compteur en images et bouton « Trouver des mots » ;
+  - communauté : messages en français marqués FR et écoutables.
+- **À faire vérifier par une personne qui parle la langue** : « 交流 » (porte Ensemble en chinois), « إضافة ملف » (Importer en arabe) et le titre « Pas de date écrite : envoyez-le bientôt » dans les quatre langues.
 - Les données restent sur le téléphone.
 
 ## 3. Démonstration de 90 secondes devant le jury

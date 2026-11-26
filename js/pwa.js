@@ -6,18 +6,18 @@ if ("serviceWorker" in navigator && document.querySelector('link[rel="manifest"]
   window.addEventListener("load", () => { navigator.serviceWorker.register("sw.js").catch(() => {}); });
 }
 window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); PWA.prompt = e; });
-window.addEventListener("appinstalled", () => { PWA.prompt = null; });
+window.addEventListener("appinstalled", () => { PWA.prompt = null; PWA.done = true; });
 async function pwaInstall() {
   if (!PWA.prompt) return false;
-  PWA.prompt.prompt(); try { await PWA.prompt.userChoice; } catch (e) {}
-  PWA.prompt = null; return true;
+  PWA.prompt.prompt(); let c = null; try { c = await PWA.prompt.userChoice; } catch (e) {}
+  PWA.prompt = null; if (c && c.outcome === "accepted") PWA.done = true; return true;
 }
 function pwaSection() {
   if (!document.querySelector('link[rel="manifest"]')) return "";
   let body;
-  if (PWA.standalone()) body = `<p class="small">${PIC.check} L’application est installée sur ce téléphone.</p>`;
-  else if (PWA.prompt) body = `<button class="act primary" data-act="pwa-install">${PIC.plus}Installer sur ce téléphone</button>`;
-  else if (PWA.ios()) body = `<p class="small">Dans Safari : touchez le bouton Partager (carré avec une flèche), puis « Sur l’écran d’accueil ».</p>`;
-  else body = `<p class="small">Dans le menu du navigateur (⋮), choisissez « Installer l’application » ou « Ajouter à l’écran d’accueil ».</p>`;
-  return `<div class="info-sec"><h3>Installer l’application</h3>${body}<p class="small muted">Après une première visite, l’application s’ouvre même sans réseau (sauf l’assistant).</p></div>`;
+  if (PWA.standalone() || PWA.done) body = `<p class="small">${PIC.check} ${esc(T("installed"))}</p>`;
+  else if (PWA.prompt) body = `<button class="act primary" data-act="pwa-install">${PIC.plus}${esc(T("installBtn"))}</button>`;
+  else if (PWA.ios()) body = `<p class="small">${esc(T("installIos"))}</p>`;
+  else body = `<p class="small">${esc(T("installMenu"))}</p>`;
+  return `<div class="info-sec"><h3>${esc(T("installTitle"))}</h3>${body}<p class="small muted">${esc(T("installOffline"))}</p></div>`;
 }
